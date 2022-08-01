@@ -1,0 +1,49 @@
+pipeline{
+  agent any
+  tools {
+    maven "maven3.8.4"
+  }
+  stages{
+    stage('GitClone'){
+      steps{
+        sh  "echo cloning the latest applications version"
+        git "https://github.com/LandmakTechnology/maven-web-application"
+      }
+    }
+    stage('TestBuild'){
+      steps{
+        sh  "echo Running unitTesting"
+        sh  "echo unitTesting ok. Creating packages"
+        sh  "mvn clean package"
+        sh  "echo Artifacts created"    
+      }
+
+    }
+    stage('codeQality'){
+        steps{
+        sh  "echo Running codeQality report"
+        sh  "docker run -d -p "
+        sh  "mvn sonar:sonar"  
+      }
+    }
+    stage('upLoadArtifacts'){
+        steps{
+        sh  "echo upLoadArtifacts into nexus"
+        sh  "mvn deploy"  
+      }      
+    }
+    stage('message'){
+      steps{
+        sh "echo CI job successful"
+      }
+    }
+    stages{
+      stage('predeployment'){
+        steps{
+          sh "docker build -t mylandmarktech/maven-web-app . "
+          //sh "docker login -u mylandmarktech"
+          sh "docker push mylandmarktech/maven-web-app"
+        }
+      }    
+  }
+}
