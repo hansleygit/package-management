@@ -25,13 +25,13 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
   $ sudo hostname ansib
   ## Add ansible user
   $ sudo useradd ansible 
-  # Set password for ansible user
+  ## Set password for ansible user
   $ sudo passwd ansible
-  # Add ansible user to the sudoers group
+  ## Add ansible user to the sudoers group
   $ echo "ansible ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible 
-  # Switch to Ansible User
+  ## Switch to Ansible User
   $ sudo su - ansible
-  # Install Python
+  ## Install Python
   $ sudo yum install python3 -y 
   ## Update python alternatives
   $ sudo alternatives --set python /usr/bin/python3 \
