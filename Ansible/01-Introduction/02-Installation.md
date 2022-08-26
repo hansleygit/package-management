@@ -21,7 +21,7 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 
 ## **Ansible installation on REDHAT EC2**
 #
-  ## ** Change server name to ansib (optional)
+  ## **Change server name to ansib (optional)
   $ sudo hostname ansib
   # Add ansible user
   $ sudo useradd ansible 
