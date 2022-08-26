@@ -21,11 +21,30 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 
 ## **Ansible installation on REDHAT EC2**
 #
-  $sudo useradd ansible \
-  $sudo hostname ansible \
-  $echo "ansible ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible \
-  $sudo su - ansible # Enable PassowrdLogin and assign password to ansible user \
-  $ sudo yum install python3 -y \
+  ## Chnage server name to ansib (optional)
+  $ sudo hostname ansib
+  ## Add ansible user
+  $ sudo useradd ansible 
+  ## Set password for ansible user
+  $ sudo passwd ansible
+  ## Add ansible user to the sudoers group
+  $ echo "ansible ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible 
+  ## Switch to Ansible User
+  $ sudo su - ansible
+  ## Install Python
+  $ sudo yum install python3 -y 
+  ## Update python alternatives
   $ sudo alternatives --set python /usr/bin/python3 \
-  $ sudo yum -y install python3-pip -y \
+  ## Verify Python Version
+  $ python --version
+  ## Install PIP
+  $ sudo yum -y install python3-pip 
+  ## Install Ansible using PIP
   $ pip3 install ansible --user
+  ## Verify Ansible Version
+  $ ansible --version
+  ## Create ansible foldder under /etc
+  $ sudo mkdir /etc/ansible
+  sudo chown -R ansilbe:ansible /etc/ansible
+  
+  
