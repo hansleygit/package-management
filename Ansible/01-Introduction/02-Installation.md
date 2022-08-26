@@ -82,8 +82,17 @@ $ vi  /etc/ansible/hosts
   $sudo mkdir /etc/ansible 
   
   $sudo chown -R ansible:ansible /etc/ansible
+  
+  create ansible.cfg file under /etc/ansible ., and paste complete content from below git link.
+      https://github.com/ansible/ansible/blob/stable-2.9/examples/ansible.cfg
+  
   ## Create ansible configuration file
   $ vi  /etc/ansible/ansible.cfg
-  ## Create ansible hosts file (inventory file)
+ 
+ Create hosts file under /etc/ansible.
+        Sample content can found in below git link.
+        https://raw.githubusercontent.com/ansible/ansible/devel/examples/hosts
+ 
+ ## Create ansible hosts file (inventory file)
   $ vi  /etc/ansible/hosts
 
