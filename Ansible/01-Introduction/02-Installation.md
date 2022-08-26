@@ -23,7 +23,7 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 #
   ## Change server name to ansib (optional)
   $ sudo hostname ansib
-  # Add ansible user
+  ## Add ansible user
   $ sudo useradd ansible 
   # Set password for ansible user
   $ sudo passwd ansible
