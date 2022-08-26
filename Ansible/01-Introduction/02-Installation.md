@@ -22,9 +22,9 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
 From class28 
 ---------------------------------------------
 ## Install ansible in ubuntu using python3-pip
-$sudo useradd ansible
-sudo passwd ansible
- echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
+$ sudo useradd ansible
+$ sudo passwd ansible
+ $ echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
 sudo su - ansible
 sudo apt install python3
 sudo apt update
