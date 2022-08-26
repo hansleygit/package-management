@@ -18,6 +18,27 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
   $ sudo su - ansible \
   $ sudo apt-add-repository ppa:ansible/ansible \
   $ sudo apt install ansible -y
+----------------------------------------------------
+From class28 
+---------------------------------------------
+## Install ansible in ubuntu using python3-pip
+sudo useradd ansible
+sudo passwd ansible
+ echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
+sudo su - ansible
+sudo apt install python3
+sudo apt update
+sudo apt install python3-pip
+pip3 install ansible --user
+sudo apt update
+sudo apt install sshpass
+sudo mkdir /etc/ansible
+sudo chown -R ansible:ansible /etc/ansible/
+vi  /etc/ansible/ansible.cfg
+vi  /etc/ansible/hosts
+
+
+
 
 ## **Ansible installation on REDHAT EC2**
 #
