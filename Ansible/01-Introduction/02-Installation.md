@@ -30,16 +30,26 @@ $ sudo passwd ansible
 $ echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
 
 $ sudo su - ansible
-sudo apt install python3
-sudo apt update
-sudo apt install python3-pip
-pip3 install ansible --user
-sudo apt update
-sudo apt install sshpass
-sudo mkdir /etc/ansible
-sudo chown -R ansible:ansible /etc/ansible/
-vi  /etc/ansible/ansible.cfg
-vi  /etc/ansible/hosts
+
+$ sudo apt install python3
+
+$ sudo apt update
+
+$ sudo apt install python3-pip
+
+$ pip3 install ansible --user
+
+$ sudo apt update
+
+$ sudo apt install sshpass
+
+$ sudo mkdir /etc/ansible
+
+$ sudo chown -R ansible:ansible /etc/ansible/
+
+$ vi  /etc/ansible/ansible.cfg
+
+$ vi  /etc/ansible/hosts
 
 
 
@@ -72,5 +82,8 @@ vi  /etc/ansible/hosts
   $sudo mkdir /etc/ansible 
   
   $sudo chown -R ansible:ansible /etc/ansible
-  
-  
+  ## Create ansible configuration file
+  $ vi  /etc/ansible/ansible.cfg
+  ## Create ansible hosts file (inventory file)
+  $ vi  /etc/ansible/hosts
+
