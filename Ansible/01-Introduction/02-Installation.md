@@ -44,7 +44,8 @@ https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.ht
   ## Verify Ansible Version
   $ ansible --version
   ## Create ansible foldder under /etc
-  $sudo mkdir /etc/ansible
+  $sudo mkdir /etc/ansible 
+  
   $sudo chown -R ansilbe:ansible /etc/ansible
   
   
