@@ -1,4 +1,4 @@
-option 1: 
+## option 1: 
  sudo apt install ansible
  sudo yum install ansible
  sudo dnf install ansible
