@@ -20,6 +20,9 @@ sudo usermod -aG docker jenkins
 sudo systemctl restart docker.service
 # Add jenkins user to the sudoers group 
 sudo echo "jenkins  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/jenkins 
+# List members of the sudoers group
+grep -Po '^sudo.+:\K.*$' /etc/group         OR
+getent group sudo | cut -d: -f4
 sudo su - jenkins
 # sudo echo "jenkins:admin" | chpasswd
 # sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
