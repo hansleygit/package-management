@@ -79,7 +79,7 @@ Landmark Foundation  =
 #9)    create ansible.cfg file under /etc/ansible ., and paste complete content from below git link.
         vi  /etc/ansible/ansible.cfg
         # copy the below url and paste in a browser.  copy the content and paste in the file above.
-        https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg
+        https://github.com/ansible/ansible/blob/stable-2.9/examples/ansible.cfg
       
       #wget  https://raw.githubusercontent.com/ansible/ansible/devel/examples/ansible.cfg -o /etc/ansible/ansible.cfg
  
