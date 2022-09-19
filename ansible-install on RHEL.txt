@@ -1,0 +1,20 @@
+#!/bin/bash
+sudo adduser ansible
+sudo hostname ansible 
+echo "ansible  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/ansible
+sudo su - ansible
+# Install python
+sudo yum install python3 -y 
+# Update python alaternatives
+sudo alternatives --set python /usr/bin/python3
+# Verify Python Version
+python --version
+# Install PIP (which is the package manager for python)
+sudo yum -y install python3-pip
+# Install ansible using PIP  (we use PIP to install ansible and only the ansible user can run ansible commands)
+pip3 install ansible --user
+# Verify Ansible version
+ansible --version
+# Create ansible folder under /etc     (creating the ansible home directory)
+sudo mkdir /etc/ansible
+sudo chown -R ansible:ansible /etc/ansible/
