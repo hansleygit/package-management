@@ -4,3 +4,4 @@ sudo hostname docker
 sudo apt install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker.service
+sudo su - docker
